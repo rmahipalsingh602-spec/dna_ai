@@ -2,58 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth font */
-* {
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.2px;
+body {
+  font-family: system-ui, sans-serif;
 }
 
-/* Hide ugly scrollbars */
+/* Smooth animations */
+* {
+  transition: all 0.25s ease;
+}
+
+/* Hide scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 20px;
-}
-
-/* Vision Pro Glass Background */
-body {
-  background: radial-gradient(circle at center, #1a1a1a, #000);
-  color: white;
-}
-
-/* Vision blur effect */
-.glass {
-  backdrop-filter: blur(25px);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Floating bubbles animation */
-.bubble {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-/* MIC pulse animation */
-.pulse {
-  animation: pulseGlow 1.5s infinite;
-}
-
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 5px rgba(0,255,200,0.2);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(0,255,200,0.8);
-  }
-  100% {
-    box-shadow: 0 0 5px rgba(0,255,200,0.2);
-  }
+  background: #7c3aed;
+  border-radius: 10px;
 }
